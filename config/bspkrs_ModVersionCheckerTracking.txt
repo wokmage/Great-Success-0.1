@@ -2,10 +2,10 @@
 
 version_check_tracker {
     S:CrystalWing=<html>
-    S:IngameInfo=<html>
+    S:IngameInfo=Forge 1.6.4.r05
     S:StartingInventory=<html>
     S:Treecapitator=<html>
-    S:bspkrsCore=v5.3(1.6.4)
+    S:bspkrsCore=<html>
 }
 
 

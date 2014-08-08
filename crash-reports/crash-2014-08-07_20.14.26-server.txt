@@ -1,0 +1,118 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 8/7/14 8:14 PM
+Description: Exception in server tick loop
+
+cpw.mods.fml.common.DuplicateModsFoundException
+	at cpw.mods.fml.common.Loader.identifyDuplicates(Loader.java:396)
+	at cpw.mods.fml.common.Loader.identifyMods(Loader.java:354)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:484)
+	at cpw.mods.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:99)
+	at cpw.mods.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:350)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:92)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:630)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.4
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.7.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1497478984 bytes (1428 MB) / 2058878976 bytes (1963 MB) up to 2863661056 bytes (2731 MB)
+	JVM Flags: 2 total; -Xmx3G -Xms2G
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	CraftBukkit Information: 
+   Running: 
+   Failed to handle CraftCrashReport:
+java.lang.NullPointerException
+	at org.bukkit.Bukkit.getName(Bukkit.java:72)
+	at org.bukkit.craftbukkit.v1_6_R3.CraftCrashReport.call(CraftCrashReport.java:19)
+	at net.minecraft.crash.CrashReportCategory.func_71500_a(CrashReportCategory.java:106)
+	at net.minecraft.crash.CrashReport.func_71504_g(CrashReport.java:58)
+	at net.minecraft.crash.CrashReport.<init>(CrashReport.java:40)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:689)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+
+	FML: MCP v8.11 FML v6.4.49.965 Minecraft Forge 9.11.1.965 71 mods loaded, 0 mods active
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) 
+	FML{6.4.49.965} [Forge Mod Loader] (DETSII.jar) 
+	Forge{9.11.1.965} [Minecraft Forge] (DETSII.jar) 
+	CodeChickenCore{0.9.0.9} [CodeChicken Core] (minecraft.jar) 
+	NotEnoughItems{1.6.1.9} [Not Enough Items] (NotEnoughItems 1.6.1.9.jar) 
+	TConstruct-Preloader{0.0.1} [Tinkers Corestruct] (minecraft.jar) 
+	DamageIndicatorsMod{2.9.2.3} [Damage Indicators] (1.6.4 DamageIndicatorsv2.9.2.3.zip) 
+	battlegear2{1.0.5.3} [Mine & Blade Battlegear 2 - Bullseye] (1.6.4-MB_Battlegear2-Bullseye-1.0.5.3B.jar) 
+	CrystalWing{Forge 1.6.4.r04} [CrystalWing] ([1.6.4]CrystalWing.Forge.1.6.4.r04.Universal.zip) 
+	extendedWorkbench{1.1.10.4} [Extended Workbench] ([1.6.4]ExtendedWorkbench v1.1.10.4.jar) 
+	StartingInventory{Forge 1.6.4.r03} [StartingInventory] ([1.6.4]StartingInventory.Forge.1.6.4.r03.Universal.zip) 
+	TreeCapitator{Forge 1.6.4.r09} [Treecapitator] ([1.6.4]TreeCapitator.Forge.1.6.4.r09.Universal.zip) 
+	wildcaves3{0.4.3.5} [Wild Caves 3] ([1.6.x] WildCaves v0.4.3.4.zip) 
+	arsmagica2{1.1.2b} [Ars Magica 2] (AM2_1.1.2b.zip) 
+	ArchimedesShipsMod{1.6.4 v1.4.5} [Archimedes' Ships] (ArchimedesShips.zip) 
+	Autoutils{1.0.1} [Autoutils] (autoutils-1.6.4-1.0.1.jar) 
+	Backpack{1.27.34} [Backpack] (backpack-1.27.34-1.6.x.jar) 
+	BetterDungeons{2.4} [Chocolate quest] (BetterDungeons2091.zip) 
+	BiblioCraft{1.5.5} [BiblioCraft] (BiblioCraft[v1.5.5].zip) 
+	bspkrsCore{v5.3(1.6.4)} [bspkrsCore] (bspkrscore.zip) 
+	BuildCraft|Builders{4.2.2} [BC Builders] (buildcraft-A-1.6.4-4.2.2.jar) 
+	BuildCraft|Core{4.2.2} [BuildCraft] (buildcraft-A-1.6.4-4.2.2.jar) 
+	BuildCraft|Energy{4.2.2} [BC Energy] (buildcraft-A-1.6.4-4.2.2.jar) 
+	BuildCraft|Factory{4.2.2} [BC Factory] (buildcraft-A-1.6.4-4.2.2.jar) 
+	BuildCraft|Silicon{4.2.2} [BC Silicon] (buildcraft-A-1.6.4-4.2.2.jar) 
+	BuildCraft|Transport{4.2.2} [BC Transport] (buildcraft-A-1.6.4-4.2.2.jar) 
+	BWG4{1.1.9} [Better World Generation 4] (BWG4_V119.zip) 
+	Chisel{1.5.0} [Chisel] (chisel-1.6.4-1.5.0fix.jar) 
+	chococraft{3.0.3} [Torojima's ChocoCraft] (Chococraft_3.0.3.zip) 
+	CraftHeraldry{1.0.3} [CraftHeraldry] (CraftHeraldry 1.0.3.zip) 
+	customnpcs{1.6.4} [CustomNpcs] (CustomNPCs_1.6.2-1.6.4.zip) 
+	DragonMounts{r36} [Dragon Mounts] (dragonmount_r36_mc1.6.x.zip) 
+	dyeablebeds{1.0} [Dyeable Beds] (DyeableBeds-Universal-1.6.2-Build12.jar) 
+	eplus{1.16.5b} [Enchanting Plus] (EnchantingPlus-1.16.5.zip) 
+	EnderStorage{1.4.3.6} [EnderStorage] (EnderStorage 1.4.3.6.jar) 
+	eternalfrost{1.5b1} [Eternal Frost] (EternalFrost.zip) 
+	EWtweaks{1.0} [Extended Workbench Tweaks] (EWtweaks.zip) 
+	ExtendedRenderer{v1.0} [Extended Renderer] (ExtendedRenderer for MC v1.6.4.zip) 
+	ExtrabiomesXL{3.15.4} [ExtrabiomesXL] (ExtrabiomesXL-universal-1.6.4-3.15.4.jar) 
+	ExtraTiC{0.8.4} [ExtraTiC] (ExtraTiC-1.6.4-0.8.4.jar) 
+	LegendaryBeasts{a1.6.4.0} [Legendary Beasts] (Forge_LegendaryBeastsAlpha1.6.4.0.zip) 
+	Hats{2.1.8} [Hats] (Hats2.1.8.zip) 
+	InfernalMobs{1.4.4} [Infernal Mobs] (InfernalMobs_1.6.4.zip) 
+	inventorytweaks{1.56} [Inventory Tweaks] (InventoryTweaks-MC1.6.2-1.56-b77.jar) 
+	KeithyUtils{1.2} [Keithy Utils] (KeithyUtils-1.6.4-1.2.16.jar) 
+	KeithyUtils{1.3} [Keithy Utils] (KeithyUtils-1.6.4-1.3.30.jar) 
+	mca{3.6.1} [Minecraft Comes Alive] (MCA-3.6.1 MC-1.6.4.zip) 
+	Metallurgy3Core{3.4.1} [Metallurgy 3 Core] (Metallurgy-1.6.4-3.4.1.32.jar) 
+	Metallurgy3Base{3.4.1} [Metallurgy 3 Base] (Metallurgy-1.6.4-3.4.1.32.jar) 
+	Metallurgy3Vanilla{3.4.1} [Metallurgy 3 Vanilla] (Metallurgy-1.6.4-3.4.1.32.jar) 
+	Metallurgy3Machines{3.4.1} [Metallurgy 3 Machines] (Metallurgy-1.6.4-3.4.1.32.jar) 
+	MoreSwordsMod{2.6.0} [More Swords Mod] (More Swords Mod 2.6.0 For 1.6.4.jar) 
+	Morph{0.7.1} [Morph] (Morph-Beta-0.7.1.zip) 
+	Natura{2.1.14} [Natura] (Natura_mc1.6.X_2.1.14.jar) 
+	ProjectZulu|Core{1.1.7.3} [Project Zulu Core] (ProjectZuluCorev1.1.7.3.zip) 
+	ProjectZulu|Mob{1.1.7.3} [Project Zulu Mobs] (ProjectZuluMobsv1.1.7.3.zip) 
+	secretroomsmod{4.6.2} [The SecretRoomsMod] (SecretRoomsMod-universal-1.6.4-4.6.2.324.jar) 
+	awger_SmallBoat{0.10.6} [SmallBoat] (smallboats.0.10.6.jar) 
+	awger_Punt{0.10.6} [Punt] (smallboats.0.10.6.jar) 
+	awger_Whitehall{0.10.6} [Whitehall] (smallboats.0.10.6.jar) 
+	awger_Hoy{0.10.6} [Hoy] (smallboats.0.10.6.jar) 
+	SS2{2 (build 2)} [Soul Shards 2] (SoulShards-2.0.15-universal-srg.jar) 
+	SpecialMobs{2.6} [Special Mobs] (SpecialMobs 2.6 for MC 1.6.2.zip) 
+	StevesCarts{2.0.0.b10} [Steve's Carts 2] (StevesCarts2.0.0.b10.zip) 
+	TConstruct{1.6.X_1.5.3dev} [Tinkers' Construct] (TConstruct_mc1.6.4_1.5.3.jar) 
+	Thaumcraft{4.1.0g} [Thaumcraft] (Thaumcraft4.1.0g.zip) 
+	ThaumicTinkerer{2.3-138} [Thaumic Tinkerer] (ThaumicTinkerer-2.3-138.jar) 
+	camping{2.0e} [The Camping Mod 2.0] (TheCampingMod_2.0e.jar) 
+	weaponmod{1.6.2 v1.13.6} [Balkon's WeaponMod] (WeaponMod.zip) 
+	witchery{0.18.0} [Witchery] (Witchery_0-18-0_164.zip) 
+	worldofdinos{1.0} [World of Dinos] (worldofdinos-1.0.jar) 
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'mcpc,craftbukkit,fml,forge'
+	Type: Dedicated Server (map_server.txt)

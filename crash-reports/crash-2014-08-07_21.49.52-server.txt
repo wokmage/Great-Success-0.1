@@ -1,0 +1,219 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 8/7/14 9:49 PM
+Description: Ticking entity
+
+java.lang.NullPointerException
+	at net.minecraft.world.chunk.Chunk.func_76592_a(Chunk.java:780)
+	at net.minecraft.world.World.func_72832_d(World.java:872)
+	at net.minecraft.world.gen.feature.WorldGenMinable.func_76484_a(WorldGenMinable.java:82)
+	at rebelkeithy.mods.metallurgy.core.metalsets.WorldGenMetals.generate(WorldGenMetals.java:114)
+	at cpw.mods.fml.common.registry.GameRegistry.generateWorld(GameRegistry.java:133)
+	at net.minecraft.world.gen.ChunkProviderServer.func_73153_a(ChunkProviderServer.java:420)
+	at net.minecraft.world.chunk.Chunk.func_76624_a(Chunk.java:1346)
+	at net.minecraft.world.gen.ChunkProviderServer.originalGetChunkAt(ChunkProviderServer.java:270)
+	at net.minecraft.world.gen.ChunkProviderServer.getChunkAt(ChunkProviderServer.java:194)
+	at net.minecraft.world.gen.ChunkProviderServer.func_73158_c(ChunkProviderServer.java:162)
+	at net.minecraft.world.gen.ChunkProviderServer.func_73154_d(ChunkProviderServer.java:285)
+	at net.minecraft.world.World.func_72964_e(World.java:804)
+	at net.minecraft.world.ChunkCache.<init>(ChunkCache.java:42)
+	at net.minecraft.world.World.func_72844_a(World.java:4522)
+	at net.minecraft.pathfinding.PathNavigate.func_75488_a(PathNavigate.java:133)
+	at net.minecraft.pathfinding.PathNavigate.func_75492_a(PathNavigate.java:141)
+	at projectzulu.common.mobs.entityai.EntityAIWander.func_75249_e(EntityAIWander.java:71)
+	at net.minecraft.entity.ai.EntityAITasks.func_75774_a(EntityAITasks.java:112)
+	at net.minecraft.entity.EntityLiving.func_70619_bc(EntityLiving.java:653)
+	at projectzulu.common.mobs.entity.EntityAerial.func_70619_bc(EntityAerial.java:96)
+	at projectzulu.common.mobs.entity.EntityGenericCreature.func_70619_bc(EntityGenericCreature.java:93)
+	at projectzulu.common.mobs.entity.EntityGenericBreedable.func_70619_bc(EntityGenericBreedable.java:34)
+	at projectzulu.common.mobs.entity.EntityGenericTameable.func_70619_bc(EntityGenericTameable.java:195)
+	at projectzulu.common.mobs.entity.EntityGenericAnimal.func_70619_bc(EntityGenericAnimal.java:91)
+	at net.minecraft.entity.EntityLivingBase.func_70636_d(EntityLivingBase.java:2140)
+	at net.minecraft.entity.EntityLiving.func_70636_d(EntityLiving.java:464)
+	at projectzulu.common.mobs.entity.EntityGenericBreedable.func_70636_d(EntityGenericBreedable.java:39)
+	at projectzulu.common.mobs.entity.EntityGenericAnimal.func_70636_d(EntityGenericAnimal.java:124)
+	at net.minecraft.entity.EntityLivingBase.func_70071_h_(EntityLivingBase.java:1973)
+	at net.minecraft.entity.EntityLiving.func_70071_h_(EntityLiving.java:264)
+	at projectzulu.common.mobs.entity.EntityGenericCreature.func_70071_h_(EntityGenericCreature.java:101)
+	at projectzulu.common.mobs.entity.EntityGenericAgeable.func_70071_h_(EntityGenericAgeable.java:36)
+	at projectzulu.common.mobs.entity.EntityGenericTameable.func_70071_h_(EntityGenericTameable.java:200)
+	at net.minecraft.world.World.func_72866_a(World.java:2945)
+	at net.minecraft.world.WorldServer.func_72866_a(WorldServer.java:1006)
+	at net.minecraft.world.World.func_72870_g(World.java:2891)
+	at net.minecraft.world.World.func_72939_s(World.java:2705)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:883)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:330)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:777)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:659)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.world.chunk.Chunk.func_76592_a(Chunk.java:780)
+	at net.minecraft.world.World.func_72832_d(World.java:872)
+	at net.minecraft.world.gen.feature.WorldGenMinable.func_76484_a(WorldGenMinable.java:82)
+	at rebelkeithy.mods.metallurgy.core.metalsets.WorldGenMetals.generate(WorldGenMetals.java:114)
+	at cpw.mods.fml.common.registry.GameRegistry.generateWorld(GameRegistry.java:133)
+	at net.minecraft.world.gen.ChunkProviderServer.func_73153_a(ChunkProviderServer.java:420)
+	at net.minecraft.world.chunk.Chunk.func_76624_a(Chunk.java:1346)
+	at net.minecraft.world.gen.ChunkProviderServer.originalGetChunkAt(ChunkProviderServer.java:270)
+	at net.minecraft.world.gen.ChunkProviderServer.getChunkAt(ChunkProviderServer.java:194)
+	at net.minecraft.world.gen.ChunkProviderServer.func_73158_c(ChunkProviderServer.java:162)
+	at net.minecraft.world.gen.ChunkProviderServer.func_73154_d(ChunkProviderServer.java:285)
+	at net.minecraft.world.World.func_72964_e(World.java:804)
+	at net.minecraft.world.ChunkCache.<init>(ChunkCache.java:42)
+	at net.minecraft.world.World.func_72844_a(World.java:4522)
+	at net.minecraft.pathfinding.PathNavigate.func_75488_a(PathNavigate.java:133)
+	at net.minecraft.pathfinding.PathNavigate.func_75492_a(PathNavigate.java:141)
+	at projectzulu.common.mobs.entityai.EntityAIWander.func_75249_e(EntityAIWander.java:71)
+	at net.minecraft.entity.ai.EntityAITasks.func_75774_a(EntityAITasks.java:112)
+	at net.minecraft.entity.EntityLiving.func_70619_bc(EntityLiving.java:653)
+	at projectzulu.common.mobs.entity.EntityAerial.func_70619_bc(EntityAerial.java:96)
+	at projectzulu.common.mobs.entity.EntityGenericCreature.func_70619_bc(EntityGenericCreature.java:93)
+	at projectzulu.common.mobs.entity.EntityGenericBreedable.func_70619_bc(EntityGenericBreedable.java:34)
+	at projectzulu.common.mobs.entity.EntityGenericTameable.func_70619_bc(EntityGenericTameable.java:195)
+	at projectzulu.common.mobs.entity.EntityGenericAnimal.func_70619_bc(EntityGenericAnimal.java:91)
+	at net.minecraft.entity.EntityLivingBase.func_70636_d(EntityLivingBase.java:2140)
+	at net.minecraft.entity.EntityLiving.func_70636_d(EntityLiving.java:464)
+	at projectzulu.common.mobs.entity.EntityGenericBreedable.func_70636_d(EntityGenericBreedable.java:39)
+	at projectzulu.common.mobs.entity.EntityGenericAnimal.func_70636_d(EntityGenericAnimal.java:124)
+	at net.minecraft.entity.EntityLivingBase.func_70071_h_(EntityLivingBase.java:1973)
+	at net.minecraft.entity.EntityLiving.func_70071_h_(EntityLiving.java:264)
+	at projectzulu.common.mobs.entity.EntityGenericCreature.func_70071_h_(EntityGenericCreature.java:101)
+	at projectzulu.common.mobs.entity.EntityGenericAgeable.func_70071_h_(EntityGenericAgeable.java:36)
+	at projectzulu.common.mobs.entity.EntityGenericTameable.func_70071_h_(EntityGenericTameable.java:200)
+	at net.minecraft.world.World.func_72866_a(World.java:2945)
+	at net.minecraft.world.WorldServer.func_72866_a(WorldServer.java:1006)
+	at net.minecraft.world.World.func_72870_g(World.java:2891)
+
+-- Entity being ticked --
+Details:
+	Entity Type: ProjectZulu|Core.Ostrich (projectzulu.common.mobs.entity.EntityOstrich)
+	Entity ID: 195
+	Entity Name: Ostrich
+	Entity's Exact location: -311.99, 65.00, 426.57
+	Entity's Block location: World: (-312,65,426), Chunk: (at 8,4,10 in -20,26; contains blocks -320,0,416 to -305,255,431), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Entity's Momentum: 0.00, -0.08, 0.00
+Stacktrace:
+	at net.minecraft.world.World.func_72939_s(World.java:2705)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 633 Drop: 0
+	Level seed: -5882841813235292170
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (-220,64,252), Chunk: (at 4,4,12 in -14,15; contains blocks -224,0,240 to -209,255,255), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 3633 game time, 3633 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 101637 (now: false), thunder time: 148642 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:883)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:330)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:777)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:659)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.4
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.7.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1270671656 bytes (1211 MB) / 2259681280 bytes (2155 MB) up to 2863661056 bytes (2731 MB)
+	JVM Flags: 2 total; -Xmx3G -Xms2G
+	AABB Pool Size: 4455 (249480 bytes; 0 MB) allocated, 1066 (59696 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 6, tallocated: 62
+	CraftBukkit Information: 
+   Running: MCPC+ version git-MCPC-Plus-jenkins-MCPC-Plus-164-259 (MC: 1.6.4) (Implementing API version 1.6.4-R2.1-SNAPSHOT) true
+   Plugins: { BanItem v2.5 com.abcalvin.BanItem.main [], Essentials v2.12.2 com.earth2me.essentials.Essentials [Zenexer, ementalo, Aelux, Brettflan, KimKandor, snowleo, ceulemans, Xeology, KHobbits, md_5, Iaccidentally], EssentialsChat v2.12.2 com.earth2me.essentials.chat.EssentialsChat [Zenexer, ementalo, Aelux, Brettflan, KimKandor, snowleo, ceulemans, Xeology, KHobbits, md_5, Okamosy, Iaccidentally], EssentialsProtect v2.12.2 com.earth2me.essentials.protect.EssentialsProtect [Zenexer, ementalo, Aelux, Brettflan, KimKandor, snowleo, ceulemans, Xeology, KHobbits], EssentialsSpawn v2.12.2 com.earth2me.essentials.spawn.EssentialsSpawn [Zenexer, ementalo, Aelux, Brettflan, KimKandor, snowleo, ceulemans, Xeology, KHobbits], EssentialsAntiBuild v2.12.2 com.earth2me.essentials.antibuild.EssentialsAntiBuild [Zenexer, ementalo, Aelux, Brettflan, KimKandor, snowleo, ceulemans, Xeology, KHobbits, Iaccidentally],}
+   Warnings: DEFAULT
+   Threads: { WAITING Reference Handler: [java.lang.Object.wait(Native Method), java.lang.Object.wait(Object.java:503), java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)], WAITING Thread-1: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.park(Unknown Source), java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source), java.util.concurrent.LinkedBlockingQueue.take(Unknown Source), cpw.mods.fml.relauncher.FMLRelaunchLog$ConsoleLogThread.run(FMLRelaunchLog.java:83), java.lang.Thread.run(Unknown Source)], TIMED_WAITING Thread-5: [java.lang.Thread.sleep(Native Method), net.minecraft.server.dedicated.DedicatedServerSleepThread.run(DedicatedServerSleepThread.java:23)], TIMED_WAITING Spigot Metrics Thread: [java.lang.Object.wait(Native Method), java.util.TimerThread.mainLoop(Unknown Source), java.util.TimerThread.run(Unknown Source)], TIMED_WAITING Snooper Timer: [java.lang.Object.wait(Native Method), java.util.TimerThread.mainLoop(Unknown Source), java.util.TimerThread.run(Unknown Source)], RUNNABLE Server thread: [java.lang.Thread.dumpThreads(Native Method), java.lang.Thread.getAllStackTraces(Unknown Source), org.bukkit.craftbukkit.v1_6_R3.CraftCrashReport.call(CraftCrashReport.java:27), net.minecraft.crash.CrashReportCategory.func_71500_a(CrashReportCategory.java:106), net.minecraft.crash.CrashReport.func_71504_g(CrashReport.java:58), net.minecraft.crash.CrashReport.<init>(CrashReport.java:40), net.minecraft.crash.CrashReport.func_85055_a(CrashReport.java:312), net.minecraft.world.World.func_72939_s(World.java:2710), net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:883), net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:330), net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:777), net.minecraft.server.MinecraftServer.run(MinecraftServer.java:659), net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)], TIMED_WAITING Spigot Watchdog Thread: [java.lang.Thread.sleep(Native Method), org.spigotmc.WatchdogThread.run(WatchdogThread.java:174)], TIMED_WAITING Thread-7: [java.lang.Thread.sleep(Native Method), buildcraft.core.Version.run(Version.java:186), java.lang.Thread.run(Unknown Source)], TIMED_WAITING Craft Scheduler Thread - 4: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source), java.util.concurrent.SynchronousQueue.poll(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], RUNNABLE Attach Listener: [], RUNNABLE Listen thread: [java.net.DualStackPlainSocketImpl.accept0(Native Method), java.net.DualStackPlainSocketImpl.socketAccept(Unknown Source), java.net.AbstractPlainSocketImpl.accept(Unknown Source), java.net.PlainSocketImpl.accept(Unknown Source), java.net.ServerSocket.implAccept(Unknown Source), java.net.ServerSocket.accept(Unknown Source), net.minecraft.server.ServerListenThread.run(ServerListenThread.java:82)], TIMED_WAITING Craft Scheduler Thread - 5: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source), java.util.concurrent.SynchronousQueue.poll(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], RUNNABLE Signal Dispatcher: [], TIMED_WAITING Craft Scheduler Thread - 1: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source), java.util.concurrent.SynchronousQueue.poll(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], RUNNABLE Command Reader: [org.fusesource.jansi.internal.Kernel32._getch(Native Method), org.fusesource.jansi.internal.WindowsSupport.readByte(WindowsSupport.java:46), org.bukkit.craftbukkit.libs.jline.WindowsTerminal.readByte(WindowsTerminal.java:184), org.bukkit.craftbukkit.libs.jline.WindowsTerminal.access$000(WindowsTerminal.java:53), org.bukkit.craftbukkit.libs.jline.WindowsTerminal$1.read(WindowsTerminal.java:151), java.io.FilterInputStream.read(Unknown Source), org.bukkit.craftbukkit.libs.jline.console.ConsoleReader$1.read(ConsoleReader.java:167), org.bukkit.craftbukkit.libs.jline.internal.InputStreamReader.read(InputStreamReader.java:267), org.bukkit.craftbukkit.libs.jline.internal.InputStreamReader.read(InputStreamReader.java:204), org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.readCharacter(ConsoleReader.java:995), org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.readLine(ConsoleReader.java:1167), net.minecraft.server.dedicated.DedicatedServerCommandThread.run(DedicatedServerCommandThread.java:38)], TIMED_WAITING Craft Scheduler Thread - 2: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source), java.util.concurrent.SynchronousQueue.poll(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], RUNNABLE DestroyJavaVM: [], TIMED_WAITING Craft Scheduler Thread - 0: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source), java.util.concurrent.SynchronousQueue.poll(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], TIMED_WAITING Craft Scheduler Thread - 3: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source), java.util.concurrent.SynchronousQueue.poll(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], WAITING Finalizer: [java.lang.Object.wait(Native Method), java.lang.ref.ReferenceQueue.remove(Unknown Source), java.lang.ref.ReferenceQueue.remove(Unknown Source), java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)],}
+   Recent tasks from 344-374{Essentials:com.earth2me.essentials.metrics.Metrics$1@32,}
+	FML: MCP v8.11 FML v6.4.49.965 Minecraft Forge 9.11.1.965 70 mods loaded, 70 mods active
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{6.4.49.965} [Forge Mod Loader] (DETSII.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{9.11.1.965} [Minecraft Forge] (DETSII.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	CodeChickenCore{0.9.0.9} [CodeChicken Core] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	NotEnoughItems{1.6.1.9} [Not Enough Items] (NotEnoughItems 1.6.1.9.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	TConstruct-Preloader{0.0.1} [Tinkers Corestruct] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	DamageIndicatorsMod{2.9.2.3} [Damage Indicators] (1.6.4 DamageIndicatorsv2.9.2.3.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	battlegear2{1.0.5.3} [Mine & Blade Battlegear 2 - Bullseye] (1.6.4-MB_Battlegear2-Bullseye-1.0.5.3B.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	bspkrsCore{v5.3(1.6.4)} [bspkrsCore] (bspkrscore.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	CrystalWing{Forge 1.6.4.r04} [CrystalWing] ([1.6.4]CrystalWing.Forge.1.6.4.r04.Universal.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	extendedWorkbench{1.1.10.4} [Extended Workbench] ([1.6.4]ExtendedWorkbench v1.1.10.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	StartingInventory{Forge 1.6.4.r03} [StartingInventory] ([1.6.4]StartingInventory.Forge.1.6.4.r03.Universal.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	TreeCapitator{Forge 1.6.4.r09} [Treecapitator] ([1.6.4]TreeCapitator.Forge.1.6.4.r09.Universal.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	wildcaves3{0.4.3.5} [Wild Caves 3] ([1.6.x] WildCaves v0.4.3.4.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	arsmagica2{1.1.2b} [Ars Magica 2] (AM2_1.1.2b.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ArchimedesShipsMod{1.6.4 v1.4.5} [Archimedes' Ships] (ArchimedesShips.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Autoutils{1.0.1} [Autoutils] (autoutils-1.6.4-1.0.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Backpack{1.27.34} [Backpack] (backpack-1.27.34-1.6.x.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BetterDungeons{2.4} [Chocolate quest] (BetterDungeons2091.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BiblioCraft{1.5.5} [BiblioCraft] (BiblioCraft[v1.5.5].zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Core{4.2.2} [BuildCraft] (buildcraft-A-1.6.4-4.2.2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Builders{4.2.2} [BC Builders] (buildcraft-A-1.6.4-4.2.2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Energy{4.2.2} [BC Energy] (buildcraft-A-1.6.4-4.2.2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Factory{4.2.2} [BC Factory] (buildcraft-A-1.6.4-4.2.2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Transport{4.2.2} [BC Transport] (buildcraft-A-1.6.4-4.2.2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Silicon{4.2.2} [BC Silicon] (buildcraft-A-1.6.4-4.2.2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BWG4{1.1.9} [Better World Generation 4] (BWG4_V119.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Chisel{1.5.0} [Chisel] (chisel-1.6.4-1.5.0fix.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	chococraft{3.0.3} [Torojima's ChocoCraft] (Chococraft_3.0.3.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	CraftHeraldry{1.0.3} [CraftHeraldry] (CraftHeraldry 1.0.3.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	customnpcs{1.6.4} [CustomNpcs] (CustomNPCs_1.6.2-1.6.4.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	DragonMounts{r36} [Dragon Mounts] (dragonmount_r36_mc1.6.x.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	dyeablebeds{1.0} [Dyeable Beds] (DyeableBeds-Universal-1.6.2-Build12.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	eplus{1.16.5b} [Enchanting Plus] (EnchantingPlus-1.16.5.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	EnderStorage{1.4.3.6} [EnderStorage] (EnderStorage 1.4.3.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	eternalfrost{1.5b1} [Eternal Frost] (EternalFrost.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	EWtweaks{1.0} [Extended Workbench Tweaks] (EWtweaks.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ExtendedRenderer{v1.0} [Extended Renderer] (ExtendedRenderer for MC v1.6.4.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ExtrabiomesXL{3.15.4} [ExtrabiomesXL] (ExtrabiomesXL-universal-1.6.4-3.15.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	KeithyUtils{1.3} [Keithy Utils] (KeithyUtils-1.6.4-1.3.30.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Thaumcraft{4.1.0g} [Thaumcraft] (Thaumcraft4.1.0g.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Metallurgy3Core{3.4.1} [Metallurgy 3 Core] (Metallurgy-1.6.4-3.4.1.32.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Metallurgy3Base{3.4.1} [Metallurgy 3 Base] (Metallurgy-1.6.4-3.4.1.32.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Natura{2.1.14} [Natura] (Natura_mc1.6.X_2.1.14.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	TConstruct{1.6.X_1.5.3dev} [Tinkers' Construct] (TConstruct_mc1.6.4_1.5.3.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ExtraTiC{0.8.4} [ExtraTiC] (ExtraTiC-1.6.4-0.8.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	LegendaryBeasts{a1.6.4.0} [Legendary Beasts] (Forge_LegendaryBeastsAlpha1.6.4.0.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Hats{2.1.8} [Hats] (Hats2.1.8.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	InfernalMobs{1.4.4} [Infernal Mobs] (InfernalMobs_1.6.4.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	inventorytweaks{1.56} [Inventory Tweaks] (InventoryTweaks-MC1.6.2-1.56-b77.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	mca{3.6.1} [Minecraft Comes Alive] (MCA-3.6.1 MC-1.6.4.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Metallurgy3Vanilla{3.4.1} [Metallurgy 3 Vanilla] (Metallurgy-1.6.4-3.4.1.32.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Metallurgy3Machines{3.4.1} [Metallurgy 3 Machines] (Metallurgy-1.6.4-3.4.1.32.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MoreSwordsMod{2.6.0} [More Swords Mod] (More Swords Mod 2.6.0 For 1.6.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Morph{0.7.1} [Morph] (Morph-Beta-0.7.1.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ProjectZulu|Core{1.1.7.3} [Project Zulu Core] (ProjectZuluCorev1.1.7.3.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ProjectZulu|Mob{1.1.7.3} [Project Zulu Mobs] (ProjectZuluMobsv1.1.7.3.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	secretroomsmod{4.6.2} [The SecretRoomsMod] (SecretRoomsMod-universal-1.6.4-4.6.2.324.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	awger_SmallBoat{0.10.6} [SmallBoat] (smallboats.0.10.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	awger_Punt{0.10.6} [Punt] (smallboats.0.10.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	awger_Whitehall{0.10.6} [Whitehall] (smallboats.0.10.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	awger_Hoy{0.10.6} [Hoy] (smallboats.0.10.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	SS2{2 (build 2)} [Soul Shards 2] (SoulShards-2.0.15-universal-srg.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	SpecialMobs{2.6} [Special Mobs] (SpecialMobs 2.6 for MC 1.6.2.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	StevesCarts{2.0.0.b10} [Steve's Carts 2] (StevesCarts2.0.0.b10.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ThaumicTinkerer{2.3-138} [Thaumic Tinkerer] (ThaumicTinkerer-2.3-138.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	camping{2.0e} [The Camping Mod 2.0] (TheCampingMod_2.0e.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	weaponmod{1.6.2 v1.13.6} [Balkon's WeaponMod] (WeaponMod.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	witchery{0.18.0} [Witchery] (Witchery_0-18-0_164.zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	worldofdinos{1.0} [World of Dinos] (worldofdinos-1.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	TConstruct Environment: DO NOT REPORT THIS CRASH! Unsupported mods in environment: bukkit
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 581 (32536 bytes; 0 MB) allocated, 81 (4536 bytes; 0 MB) used
+	Player Count: 0 / 20; []
+	Is Modded: Definitely; Server brand changed to 'mcpc,craftbukkit,fml,forge'
+	Type: Dedicated Server (map_server.txt)
