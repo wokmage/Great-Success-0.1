@@ -1,0 +1,12 @@
+<topleft><darkgreen>DLC's Dont Eat The Stone II &f:: &b2.1.12B
+
+
+
+
+
+
+
+<darkgreen>Day &f<day> <darkgreen>(<daytime[&e/&8]><mctime[12]><darkgreen>) <slimes[<darkgreen>/&b]><biome>
+<darkgreen>Time: &b<rltime[h:mma]>
+<darkgreen>Light: <max[<lightnosunfeet>/7[&e/&c]]><max[<lightnosunfeet>/9[&a/]]><lightnosunfeet>
+<darkgreen>XP: &e<xpthislevel>&f / &e<xpcap>
